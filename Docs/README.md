@@ -1,8 +1,8 @@
 <div style="display: flex; align-items: center; gap: 20px;">
-  <img src="https://github.com/BEISER901/bscript-runner/Docs/Images/BScript-baner.png" width="300" alt="BScript" />
+  <img src="./Images/BScript-baner.png" width="300" alt="BScript" />
 
   <div>
-    <h2>BScript Runner <img src="https://github.com/BEISER901/bscript-runner/Docs/Images/Logo.png" width="25" style="vertical-align: middle;"/> </h2>
+    <h2>BScript Runner <img src="./Images/Logo.png" width="25" style="vertical-align: middle;"/> </h2>
 
 <p><strong>Lightweight Embeddable Scripting Language for Node.js</strong></p>
 
