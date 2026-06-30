@@ -65,7 +65,7 @@ yarn add @beiser/bscript-runner
 ### Basic Usage
 
 ```javascript
-const BScript = require("bscript-cli").BScript
+const BScript = require("@beiser/bscript-runner").BScript
 const Runner = require("bscript-runner").Runner
 
 const script = `
