@@ -1,0 +1,14 @@
+{
+  "name": "bscript-runner",
+  "version": "1.0.0",
+  "description": "Runtime engine responsible for executing transpiled BScript code, managing scopes, variables, functions, imports, and asynchronous execution.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [
+    "bscript",
+    "nodejs"
+  ],
+  "author": "Bondar Nikita ( Beiser )",
+  "license": "ISC"
+}
