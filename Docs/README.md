@@ -47,17 +47,17 @@ BScript is a compact and flexible scripting engine that allows you to execute cu
 
 **Using npm**
 ```bash
-npm install bscript-runner
+npm install @beiser/bscript-runner
 ```
 
 **Using pnpm**
 ```bash
-pnpm add bscript-runner
+pnpm add @beiser/bscript-runner
 ```
 
 **Using yarn**
 ```bash
-yarn add bscript-runner
+yarn add @beiser/bscript-runner
 ```
 
 ---
