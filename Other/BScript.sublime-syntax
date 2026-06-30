@@ -1,0 +1,86 @@
+%YAML 1.2
+---
+name: BScript
+file_extensions:
+  - bs
+scope: source.bscript
+
+contexts:
+
+  main:
+    - include: comments
+    - include: strings
+    - include: variables
+    - include: interpolation
+    - include: keywords
+    - include: commands
+    - include: constants
+    - include: numbers
+    - include: operators
+    - include: braces
+
+  comments:
+    - match: '//.*$'
+      scope: comment.line.double-slash.bscript
+
+  strings:
+    - match: '`'
+      scope: punctuation.definition.string.begin.bscript
+      push:
+        - meta_scope: string.quoted.other.bscript
+        - match: '`'
+          scope: punctuation.definition.string.end.bscript
+          pop: true
+
+  variables:
+    - match: '\$\('
+      scope: punctuation.definition.variable.begin.bscript
+      push:
+        - meta_scope: variable.other.bscript
+        - include: strings
+        - match: '\)'
+          scope: punctuation.definition.variable.end.bscript
+          pop: true
+
+  interpolation:
+    - match: '\$\{'
+      scope: punctuation.section.embedded.begin.bscript
+      push:
+        - meta_scope: meta.interpolation.bscript
+        - include: main
+        - match: '\}'
+          scope: punctuation.section.embedded.end.bscript
+          pop: true
+
+  keywords:
+    - match: '\b(IF|ELSE)\b'
+      scope: keyword.control.conditional.bscript
+
+    - match: '\bASYNC-FUNC\b'
+      scope: storage.type.function.bscript
+
+  commands:
+    - match: '\b(print|num|bool|str|import)\b'
+      scope: support.function.bscript
+
+  constants:
+    - match: '\b(true|false|0|1)\b'
+      scope: constant.language.bscript
+
+  numbers:
+    - match: '\b\d+(?:\.\d+)?\b'
+      scope: constant.numeric.bscript
+
+  operators:
+    - match: '=>'
+      scope: keyword.operator.arrow.bscript
+
+    - match: '='
+      scope: keyword.operator.assignment.bscript
+
+    - match: '\*'
+      scope: keyword.operator.wildcard.bscript
+
+  braces:
+    - match: '[{}()]'
+      scope: punctuation.section.block.bscript
