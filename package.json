@@ -9,6 +9,9 @@
     "bscript",
     "nodejs"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Bondar Nikita ( Beiser )",
   "license": "ISC"
 }
