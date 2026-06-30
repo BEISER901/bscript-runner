@@ -1,8 +1,8 @@
 <div style="display: flex; align-items: center; gap: 20px;">
-  <img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/BScript-baner.png" width="300" alt="BScript" />
+  <img src="https://github.com/BEISER901/bscript-runner/Docs/Images/BScript-baner.png" width="300" alt="BScript" />
 
   <div>
-    <h2>BScript Runner <img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/Logo.png" width="25" style="vertical-align: middle;"/> </h2>
+    <h2>BScript Runner <img src="https://github.com/BEISER901/bscript-runner/Docs/Images/Logo.png" width="25" style="vertical-align: middle;"/> </h2>
 
 <p><strong>Lightweight Embeddable Scripting Language for Node.js</strong></p>
 
@@ -10,9 +10,9 @@
 
 <p>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-18%2B-brightgreen.svg" alt="Node.js"></a>
-  <a href="https://www.npmjs.com/package/bscript-runner"><img src="https://img.shields.io/npm/v/bscript-runner.svg" alt="npm"></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/github/license/ModuDevCore/bscript-runner.svg" alt="License"></a>
-  <a href="https://github.com/ModuDevCore/bscript-runner/releases"><img src="https://img.shields.io/github/v/release/ModuDevCore/bscript-runner?style=flat-square" alt="GitHub releases"></a>
+  <a href="https://www.npmjs.com/package/@beiser/bscript-runner?activeTab=readme"><img src="https://img.shields.io/npm/v/@beiser/bscript-runner.svg" alt="npm"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/github/license/BEISER901/bscript-runner.svg" alt="License"></a>
+  <a href="https://github.com/BEISER901/bscript-runner/bscript-runner/releases"><img src="https://img.shields.io/github/v/release/BEISER901/bscript-runner?style=flat-square" alt="GitHub releases"></a>
 </p>
   </div>
 </div>
