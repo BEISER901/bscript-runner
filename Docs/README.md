@@ -1,21 +1,34 @@
-<div style="display: flex; align-items: center; gap: 20px;">
-  <img src="./Images/BScript-baner.png" width="300" alt="BScript" />
+<table>
+<tr>
+<td width="320">
 
-  <div>
-    <h2>BScript Runner <img src="./Images/Logo.png" width="25" style="vertical-align: middle;"/> </h2>
+<img src="./Images/BScript-baner.png" width="300" alt="BScript"/>
 
-<p><strong>Lightweight Embeddable Scripting Language for Node.js</strong></p>
+</td>
 
-<p>BScript is a compact and flexible scripting engine that allows you to execute custom scripts inside JavaScript applications. It supports variables, conditionals, functions (including async), commands, and nested scopes.</p>
+<td>
 
-<p>
-  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-18%2B-brightgreen.svg" alt="Node.js"></a>
-  <a href="https://www.npmjs.com/package/@beiser/bscript-runner?activeTab=readme"><img src="https://img.shields.io/npm/v/@beiser/bscript-runner.svg" alt="npm"></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/github/license/BEISER901/bscript-runner.svg" alt="License"></a>
-  <a href="https://github.com/BEISER901/bscript-runner/bscript-runner/releases"><img src="https://img.shields.io/github/v/release/BEISER901/bscript-runner?style=flat-square" alt="GitHub releases"></a>
-</p>
-  </div>
-</div>
+## BScript Runner <img src="./Images/Logo.png" width="24" alt=""/>
+
+**Lightweight Embeddable Scripting Language for Node.js**
+
+BScript is a compact and flexible scripting engine that allows you to execute custom scripts inside JavaScript applications. It supports variables, conditionals, functions (including async), commands, and nested scopes.
+
+<a href="https://nodejs.org/">
+<img src="https://img.shields.io/badge/Node.js-18%2B-brightgreen.svg">
+</a>
+
+<a href="https://www.npmjs.com/package/@beiser/bscript-runner">
+<img src="https://img.shields.io/npm/v/@beiser/bscript-runner.svg">
+</a>
+
+<a href="./LICENSE">
+<img src="https://img.shields.io/github/license/BEISER901/bscript-runner.svg">
+</a>
+
+</td>
+</tr>
+</table>
 
 ---
 
