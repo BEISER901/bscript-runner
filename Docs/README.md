@@ -1,12 +1,4 @@
-<table>
-<tr>
-<td width="320">
-
 <img src="./Images/BScript-baner.png" width="300" alt="BScript"/>
-
-</td>
-
-<td>
 
 ## BScript Runner <img src="./Images/Logo.png" width="24" alt=""/>
 
@@ -25,10 +17,6 @@ BScript is a compact and flexible scripting engine that allows you to execute cu
 <a href="./LICENSE">
 <img src="https://img.shields.io/github/license/BEISER901/bscript-runner.svg">
 </a>
-
-</td>
-</tr>
-</table>
 
 ---
 
