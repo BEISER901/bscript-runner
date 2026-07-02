@@ -1,6 +1,6 @@
 {
   "name": "@beiser/bscript-runner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Runtime engine responsible for executing transpiled BScript code, managing scopes, variables, functions, imports, and asynchronous execution.",
   "main": "index.js",
   "devDependencies": {},

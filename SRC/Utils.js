@@ -102,7 +102,7 @@ module.exports = {
 			let currentFrameScopeIndex = 0;
 			let scopeToPush = null;
 			while ((regexScopeFrameFound = regexScopeFrame.exec(script)) !== null) {
-				scopeToPush = { scopeScript: regexScopeFrameFound[2], mirrorOffsetFrame, path: `scope:path:${mirrorOffsetFrame}:${currentFrameScopeIndex}`}
+				scopeToPush = { scopeScript: regexScopeFrameFound[2]?.replace("\t", ""), mirrorOffsetFrame, path: `scope:path:${mirrorOffsetFrame}:${currentFrameScopeIndex}`}
 
 			    rawFrameInfo.push(scopeToPush)
 				newScriptUnparsed = newScriptUnparsed.slice(0, regexScopeFrameFound.index - offsetFoundIndex) + `$(scope:path:${mirrorOffsetFrame}:${currentFrameScopeIndex})` + newScriptUnparsed.slice(regexScopeFrameFound.index + regexScopeFrameFound[0].length - offsetFoundIndex, newScriptUnparsed.length);
