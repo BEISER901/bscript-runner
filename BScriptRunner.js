@@ -101,6 +101,24 @@ module.exports = class BScriptRunner {
 					    .filter(([name, value]) => value !== 0 && (scopeDeclarationType & value))
 					    .map(([name]) => name);
 
+
+					// ############	QuoteProcessing	############
+					if(
+						scopeDeclarationType & ScopeFlags.Quoted && // In quotation marks
+						scopeDeclarationType & ScopeFlags.Text && // And text-based
+						mainScope.beforePath.replace("\t", "").replace(" ", "") == "" && mainScope.afterPath.replace("\t", "").replace(" ", "") == "" // There is nothing before and after the buckets
+					){
+						results.push(Helpers.Text(mainScope.content.quoteText))
+						continue
+					}
+					// ############	FunctionProcessing	############
+					if(
+						scopeDeclarationType & ScopeFlags.Function
+					){
+						const value = Helpers.createFunction(null, this, Helpers.createFunction(null, this, mainScope, this), this);
+						results.push(Helpers.Function(null, value, !!(mainScope.GetActiveDeclarations() & ScopeFlags.Async)));
+						continue
+					}
 					// ############	AssigmentProcessing	############
 					if(
 						scopeDeclarationType & ScopeFlags.AssignmentName // The scope declaration is similar to the assignment name
@@ -268,42 +286,31 @@ module.exports = class BScriptRunner {
 		const scopeDeclarationType = mainScope.GetActiveDeclarations()
 		const ScopeFlags = Scope.ScopeFlags
 
-		if(scopeDeclarationType & ScopeFlags.Function){
-			if(assignmentValue && assignmentName) {    				
-			const value = Helpers.createFunction(null, this, Helpers.createFunction("Function", this, scope, this), this);
-				results.push(this.setValueToScope("Function", value, this.scopePathId??"root"));
-				return Helpers.ProcessingContinue(results);
-			}
-			else if(value)
-				results.push(value);
+		async function scopeRunnerEnviroment0(context){
+			const result = await Utils.newScriptRunner.bind(context)(scope.content.scopeScript, scope.path, this)()
+			return scopeDeclarationType & ScopeFlags.Object ? await toObject(result) : result;
 		}
-		else {
-			async function scopeRunnerEnviroment0(context){
-				const result = await Utils.newScriptRunner.bind(context)(scope.content.scopeScript, scope.path, this)()
-				return scopeDeclarationType & ScopeFlags.Object ? await toObject(result) : result;
-			}
-			const executer = !(scopeDeclarationType & ScopeFlags.Text) ? scopeDeclarationType & ScopeFlags.Async ? scopeRunnerEnviroment0(this): await scopeRunnerEnviroment0(this) : null
-			const value = (scopeDeclarationType & ScopeFlags.Text) ? 
-					scopeDeclarationType & ScopeFlags.Quoted ?
-					Helpers.Text(mainQuote.content.quoteText)
-				:
-					Helpers.Text(mainScope.content.scopeScript)
-			: 
-				scopeDeclarationType & ScopeFlags.Number  
-			? 
-				Helpers.Number(Number(scope.content.scopeScript))
-			: 
-				scopeDeclarationType & ScopeFlags.Async 
-			? 
-				new Type({ type: Type.PromiseType, val: executer })
-			: 
-				executer
-			results.push(value);
-			if((scopeDeclarationType & ScopeFlags.Text))
-				return Helpers.ProcessingContinue(results);
-		}
-		if(!(scopeDeclarationType & ScopeFlags.Text))
-			return Helpers.ProcessingContinue(results);	
+		const executer = !(scopeDeclarationType & ScopeFlags.Text) ? scopeDeclarationType & ScopeFlags.Async ? scopeRunnerEnviroment0(this): await scopeRunnerEnviroment0(this) : null
+
+		const value = (scopeDeclarationType & ScopeFlags.Text) ? 
+				scopeDeclarationType & ScopeFlags.Quoted ?
+				Helpers.Text(mainScope.content.quoteText)
+			:
+				Helpers.Text(mainScope.content.scopeScript)
+		: 
+			scopeDeclarationType & ScopeFlags.Number  
+		? 
+			Helpers.Number(Number(scope.content.scopeScript))
+		: 
+			scopeDeclarationType & ScopeFlags.Async 
+		? 
+			new Type({ type: Type.PromiseType, val: executer })
+		: 
+			executer
+		results.push(value);
+		if((scopeDeclarationType & ScopeFlags.Text))
+			return Helpers.ProcessingContinue(results);
+		return Helpers.ProcessingContinue(results);	
 	}
 	async #CommandProcessing(mainScope) {
 		const results = []
@@ -316,7 +323,8 @@ module.exports = class BScriptRunner {
 				return arg? !arg?.type && !arg?.val? new Type(arg) : arg : null
 			}
 
-			let args = mainScope.frame.split(" ").filter(x => x != '');
+			let args = mainScope.frame.replace("\t", "").split(" ").filter(x => x != '');
+
 			const commandName = args[0].replace(" ");
 			args.shift();
 			for(let i = 0; i < args.length; i++) {

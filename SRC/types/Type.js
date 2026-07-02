@@ -47,7 +47,7 @@ module.exports = class Type {
 	    const pad = " ".repeat(nextIndent);
 
 		switch(this?.type){
-			case Type.FuncionType: return `${Color.Func}[FUNC${this?.name ? "-"+this.name : ""}]${Color.Reset}`
+			case Type.FuncionType: return `${Color.Func}[${this?.isAsync? "ASYNC-": ""}FUNC${this?.name ? "-"+this.name.val : ""}]${Color.Reset}`
 			case Type.PromiseType: return `${Color.Bracket}{${Color.Promise}PROMISE${Color.Bracket}[${Color.Reset}...${Color.Bracket}]}${Color.Reset}`
 			case Type.TextType: return `${Color.String}${this.val}${Color.Reset}`
 			case Type.NumberType: return `${Color.Number}${this.val}${Color.Reset}`

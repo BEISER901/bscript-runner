@@ -36,6 +36,10 @@
 | Link | Description |
 |------|-------------|
 | **[API Reference](./REFERENCE.md)** | Complete public API documentation |
+| **[Syntax Reference](./BScript/SYNTAX.md)** — BScript Syntax Reference |
+| **[CLI Reference](https://github.com/BEISER901/bscript-cli/blob/main/Docs/BScript/BSCRIPT-REFERENCE-CLI.md)** | Available BScript commands and their declaration. |
+| **[bscript-cli](https://github.com/BEISER901/bscript-cli/tree/main)** | Available BScript commands and their declaration. |
+| **[API Reference](./REFERENCE.md)** | Complete public API documentation |
 | **[Technical](./TECHNICAL.md)** | Internal architecture and implementation details |
 
 ---
@@ -94,6 +98,7 @@ bScriptRunner.executer(); // Hello world!
 
 ## 📚 Documentation
 
+- **[Syntax](./BScript/SYNTAX.md)** — BScript Syntax Reference
 - **[API Reference](./REFERENCE.md)** — Full public API documentation
 - **[Technical](./TECHNICAL.md)** — Architecture and internal implementation
 
