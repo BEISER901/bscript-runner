@@ -449,7 +449,7 @@ str `Hello`
 
 See:
 
-- [bscript-cli](./)
+**[CLI Reference](https://github.com/BEISER901/bscript-cli/blob/main/Docs/BScript/BSCRIPT-REFERENCE-CLI.md)** - Available BScript commands and their declaration.
 
 <a id="Functions"></a>
 ## 6. Functions
