@@ -271,7 +271,7 @@ Type tag for synchronous and asynchronous function values.
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/FuncionType.png" width="100%" alt="Example"/>
+<img src="./Images/FuncionType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -290,7 +290,7 @@ Type tag for deferred/async results.
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/PromiseType.png" width="100%" alt="Example"/>
+<img src="./Images/PromiseType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -309,7 +309,7 @@ Type tag for string values.
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/TextType.png" width="100%" alt="Example"/>
+<img src="./Images/TextType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -328,7 +328,7 @@ Type tag for numeric values.
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/NumberType.png" width="100%" alt="Example"/>
+<img src="./Images/NumberType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -347,7 +347,7 @@ Type tag for boolean values (internally stored as 0/1).
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/BooleanType.png" width="100%" alt="Example"/>
+<img src="./Images/BooleanType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -404,7 +404,7 @@ Type tag for object values (maps of keys to `Type` instances).
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/ObjectType.png" width="100%" alt="Example"/>
+<img src="./Images/ObjectType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -423,7 +423,7 @@ Type tag for reference handles that support get/set operations.
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/RefType.png" width="100%" alt="Example"/>
+<img src="./Images/RefType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 
@@ -442,7 +442,7 @@ Fallback type tag for values without an explicit type.
 
 </td>
 <td width="30%">
-<img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/RawType.png" width="100%" alt="Example"/>
+<img src="./Images/RawType.png" width="100%" alt="Example"/>
 </td>
 </tr>
 

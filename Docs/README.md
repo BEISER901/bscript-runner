@@ -1,21 +1,22 @@
-<div style="display: flex; align-items: center; gap: 20px;">
-  <img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/BScript-baner.png" width="300" alt="BScript" />
+<img src="./Images/BScript-baner.png" width="300" alt="BScript"/>
 
-  <div>
-    <h2>BScript Runner <img src="file:///home/nikita/Документы/GitHub/bscript-runner/Docs/Images/Logo.png" width="25" style="vertical-align: middle;"/> </h2>
+## BScript Runner <img src="./Images/Logo.png" width="24" alt=""/>
 
-<p><strong>Lightweight Embeddable Scripting Language for Node.js</strong></p>
+**Lightweight Embeddable Scripting Language for Node.js**
 
-<p>BScript is a compact and flexible scripting engine that allows you to execute custom scripts inside JavaScript applications. It supports variables, conditionals, functions (including async), commands, and nested scopes.</p>
+BScript is a compact and flexible scripting engine that allows you to execute custom scripts inside JavaScript applications. It supports variables, conditionals, functions (including async), commands, and nested scopes.
 
-<p>
-  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-18%2B-brightgreen.svg" alt="Node.js"></a>
-  <a href="https://www.npmjs.com/package/bscript-runner"><img src="https://img.shields.io/npm/v/bscript-runner.svg" alt="npm"></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/github/license/ModuDevCore/bscript-runner.svg" alt="License"></a>
-  <a href="https://github.com/ModuDevCore/bscript-runner/releases"><img src="https://img.shields.io/github/v/release/ModuDevCore/bscript-runner?style=flat-square" alt="GitHub releases"></a>
-</p>
-  </div>
-</div>
+<a href="https://nodejs.org/">
+<img src="https://img.shields.io/badge/Node.js-18%2B-brightgreen.svg">
+</a>
+
+<a href="https://www.npmjs.com/package/@beiser/bscript-runner">
+<img src="https://img.shields.io/npm/v/@beiser/bscript-runner.svg">
+</a>
+
+<a href="./LICENSE">
+<img src="https://img.shields.io/github/license/BEISER901/bscript-runner.svg">
+</a>
 
 ---
 
@@ -50,17 +51,17 @@
 
 **Using npm**
 ```bash
-npm install bscript-runner
+npm install @beiser/bscript-runner
 ```
 
 **Using pnpm**
 ```bash
-pnpm add bscript-runner
+pnpm add @beiser/bscript-runner
 ```
 
 **Using yarn**
 ```bash
-yarn add bscript-runner
+yarn add @beiser/bscript-runner
 ```
 
 ---
@@ -68,7 +69,7 @@ yarn add bscript-runner
 ### Basic Usage
 
 ```javascript
-const BScript = require("bscript-cli").BScript
+const BScript = require("@beiser/bscript-runner").BScript
 const Runner = require("bscript-runner").Runner
 
 const script = `
